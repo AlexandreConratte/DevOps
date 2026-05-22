@@ -21,8 +21,19 @@ Pour chaque fiche :
 3. Refaire les commandes ou manipulations.
 4. Faire les exercices.
 5. Repondre au drill.
-6. Ecrire 5 lignes dans un journal d'apprentissage.
-7. Faire un commit.
+6. Ecrire 5 lignes dans `JOURNAL_APPRENTISSAGE.md`.
+7. Mettre a jour `SUIVI_PROGRESSION.md`.
+8. Faire un commit.
+
+Rythme conseille pour une session :
+
+| Temps | Action |
+|---|---|
+| 15 min | Relire l'objectif et les mots importants |
+| 30 min | Lire ou reviser la fiche |
+| 60 a 90 min | Faire les exercices |
+| 15 min | Documenter dans le journal |
+| 5 min | Committer si le travail est propre |
 
 ---
 
@@ -34,6 +45,14 @@ Pour chaque fiche :
 | Manipule | Tu as utilise l'outil | `docker compose up` fonctionne |
 | Explique | Tu peux expliquer sans lire la fiche | Tu expliques image vs conteneur |
 | Montre | C'est visible sur GitHub | README + code + capture si utile |
+
+## Criteres concrets avant de passer a la suite
+
+- Tu peux refaire l'exercice principal sans copier-coller.
+- Tu peux expliquer les mots importants sans relire la fiche.
+- Tu as produit une preuve visible : commande, script, config, README ou capture utile.
+- Tu as documente au moins un blocage ou une erreur.
+- Tu as fait un commit propre avec un message clair.
 
 ---
 
@@ -77,14 +96,37 @@ Format conseille :
 | 02 Reseau | Non | Non | Non | Non | |
 | 03 Git | Non | Non | Non | Non | |
 | 04 Bash/Python | Non | Non | Non | Non | |
+| 11 Databases/YAML | Non | Non | Non | Non | |
 | 05 Docker | Non | Non | Non | Non | |
 | 06 CI/CD | Non | Non | Non | Non | |
 | 07 Deploiement | Non | Non | Non | Non | |
+| 10 Monitoring/Securite | Non | Non | Non | Non | |
 | 08 Terraform | Non | Non | Non | Non | |
 | 09 Kubernetes | Non | Non | Non | Non | |
-| 10 Monitoring/Securite | Non | Non | Non | Non | |
-| 11 Databases/YAML | Non | Non | Non | Non | |
 | 12 Role/Mentalite/Entretien | Non | Non | Non | Non | |
+
+---
+
+## Checklist fin de semaine
+
+- Une fiche ou une section utile a ete lue.
+- Au moins un exercice facile a ete fait.
+- Au moins un exercice moyen a ete tente si possible.
+- Les commandes lancees sont notees.
+- Les erreurs rencontrees sont notees.
+- Le journal d'apprentissage est mis a jour.
+- Le suivi de progression est mis a jour.
+- Un commit propre existe.
+
+## Mini-evaluation toutes les 4 semaines
+
+Avant de passer au mois suivant :
+
+1. Refaire un exercice sans regarder la fiche.
+2. Expliquer les notions principales en 5 minutes.
+3. Montrer une preuve GitHub ou locale.
+4. Noter ce qui reste fragile.
+5. Decider si la suite peut commencer ou s'il faut consolider.
 
 ---
 

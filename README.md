@@ -12,6 +12,8 @@ L'idee centrale :
 .
 |-- README.md
 |-- ROADMAP_DEVOPS.md
+|-- JOURNAL_APPRENTISSAGE.md
+|-- SUIVI_PROGRESSION.md
 |-- fiches/
 |   |-- 00_Mode_emploi.md
 |   |-- 01_Linux_Terminal_SSH.md
@@ -26,9 +28,24 @@ L'idee centrale :
 |   |-- 10_Monitoring_Logs_Securite.md
 |   |-- 11_Databases_YAML.md
 |   `-- 12_Role_Mentalite_Entretien.md
+|-- exercices/
+|   |-- README.md
+|   `-- 01_linux/
 `-- projets/
     `-- PROJETS_PORTFOLIO.md
 ```
+
+## Jour 0
+
+Avant de commencer les outils avances :
+
+1. Lire ce README.
+2. Lire `fiches/00_Mode_emploi.md`.
+3. Lire la vue d'ensemble de `ROADMAP_DEVOPS.md`.
+4. Ouvrir `JOURNAL_APPRENTISSAGE.md`.
+5. Ouvrir `SUIVI_PROGRESSION.md`.
+6. Commencer uniquement `fiches/01_Linux_Terminal_SSH.md`.
+7. Travailler dans `exercices/01_linux/`.
 
 ## Methode
 
@@ -42,6 +59,16 @@ Pour chaque fiche :
 6. Noter ce qui bloque.
 7. Committer proprement le travail.
 
+Rythme conseille pour une session :
+
+| Temps | Action |
+|---|---|
+| 15 min | Relire l'objectif et les mots importants |
+| 30 min | Lire ou reviser la fiche |
+| 60 a 90 min | Faire les exercices |
+| 15 min | Documenter dans le journal |
+| 5 min | Committer si le travail est propre |
+
 Validation d'une fiche :
 
 | Niveau    | Condition                                     |
@@ -50,6 +77,16 @@ Validation d'une fiche :
 | Manipule  | Tu as lance des commandes ou ecrit un fichier |
 | Explique  | Tu peux l'expliquer simplement a quelqu'un    |
 | Portfolio | Tu l'as utilise dans un projet GitHub         |
+
+Validation concrete avant de passer a la suite :
+
+- tu peux refaire l'exercice principal sans copier-coller;
+- tu peux expliquer le vocabulaire sans relire la fiche;
+- tu as une preuve visible dans `exercices/`, `projets/` ou un README;
+- tu as note au moins une erreur ou un blocage reel;
+- tu as fait un commit clair.
+
+Chaque fin de semaine, utiliser la checklist dans `SUIVI_PROGRESSION.md`.
 
 ## Regle d'or
 
@@ -60,6 +97,7 @@ Apprendre DevOps comme un chemin :
 ```txt
 Application locale
 -> Git
+-> YAML + bases de donnees simples
 -> Docker
 -> CI/CD
 -> Serveur Linux

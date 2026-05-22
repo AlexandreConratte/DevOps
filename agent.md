@@ -54,16 +54,19 @@ Respecter l'ordre logique :
 2. Reseau
 3. Git
 4. Bash / Python
-5. Docker
-6. Docker Compose
-7. CI/CD
-8. Deploiement serveur
-9. Cloud
-10. Terraform
-11. Monitoring / logs / securite
-12. Kubernetes
+5. YAML / bases de donnees simples
+6. Docker
+7. Docker Compose
+8. CI/CD
+9. Deploiement serveur
+10. Monitoring / logs / securite
+11. Cloud
+12. Terraform
+13. Kubernetes
 
-Ne pas introduire Kubernetes, Terraform ou Grafana avant que les bases Linux, reseau, Git et Docker soient posees.
+Ne pas introduire Kubernetes, Terraform ou Grafana avant que les bases Linux, reseau, Git, YAML, bases de donnees simples et Docker soient posees.
+
+Ne pas introduire Docker Compose avance ou CI/CD avant que l'apprenant comprenne les bases de YAML, des variables d'environnement et d'une connexion PostgreSQL.
 
 ## Regle pratique
 

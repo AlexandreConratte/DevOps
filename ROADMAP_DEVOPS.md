@@ -11,6 +11,8 @@ Rythme recommande :
 
 Chaque semaine doit produire quelque chose de visible : notes, script, Dockerfile, pipeline, mini-projet ou README.
 
+Chaque mois se termine par une mini-evaluation avant de passer a la suite.
+
 ---
 
 ## Vue d'ensemble
@@ -18,11 +20,26 @@ Chaque semaine doit produire quelque chose de visible : notes, script, Dockerfil
 | Mois | Theme | Objectif principal | Preuve GitHub |
 |---|---|---|---|
 | 1 | Linux, terminal, Git, reseau | Etre a l'aise dans un environnement serveur | Notes + exercices + mini scripts |
-| 2 | Bash, Python utilitaire, YAML, logs | Automatiser de petites taches | Repo "devops-toolbox" |
+| 2 | Bash, Python utilitaire, YAML, bases de donnees, logs | Automatiser de petites taches | Repo "devops-toolbox" |
 | 3 | Docker, Compose, PostgreSQL | Lancer une application complete en local | App dockerisee |
 | 4 | CI/CD, serveur, Nginx, HTTPS | Automatiser et deployer | Pipeline + deploiement documente |
 | 5 | Cloud, Terraform, monitoring, securite | Industrialiser proprement | Infra as Code + dashboard |
 | 6 | Kubernetes intro + projet final | Montrer une vision DevOps complete | Projet portfolio final |
+
+---
+
+## Checkpoint toutes les 4 semaines
+
+Avant de passer au mois suivant :
+
+1. refaire un exercice important sans regarder la fiche;
+2. expliquer les notions principales en 5 minutes;
+3. montrer une preuve dans `exercices/`, `projets/` ou un README;
+4. mettre a jour `JOURNAL_APPRENTISSAGE.md`;
+5. mettre a jour `SUIVI_PROGRESSION.md`;
+6. noter les points encore fragiles.
+
+Si plusieurs points sont fragiles, consolider une semaine avant d'ajouter un nouvel outil.
 
 ---
 
@@ -75,7 +92,7 @@ Transformer des commandes repetitives en scripts.
 | 5 | Bash base | variables, conditions, boucles, codes de sortie |
 | 6 | Scripts systeme | backup, check HTTP, lecture de logs |
 | 7 | Python utilitaire | fichiers, JSON, requetes HTTP simples |
-| 8 | YAML + logs | lire et modifier des fichiers de configuration |
+| 8 | YAML + bases de donnees simples + logs | lire une config, comprendre une URL PostgreSQL, identifier des logs |
 
 ### Projet portfolio 1
 
@@ -94,6 +111,13 @@ L'apprenant doit pouvoir dire :
 
 > J'ai automatise des verifications simples en Bash et Python, avec des scripts documentes et executables.
 
+Mini-evaluation semaine 8 :
+
+- corriger une indentation YAML cassee;
+- expliquer les parties d'une URL PostgreSQL;
+- lire un fichier de log et isoler les erreurs;
+- montrer les scripts du repo `devops-toolbox`.
+
 ---
 
 ## Mois 3 - Docker et applications composees
@@ -108,7 +132,7 @@ Comprendre comment emballer une application et ses dependances.
 |---|---|---|
 | 9 | Docker base | image, conteneur, port, logs |
 | 10 | Dockerfile | construire une image simple |
-| 11 | Docker Compose | API + PostgreSQL + Adminer |
+| 11 | Docker Compose | API + PostgreSQL + Adminer, en reutilisant les bases YAML/DB |
 | 12 | Volumes, networks, `.env` | persister les donnees et configurer proprement |
 
 ### Projet portfolio 2
@@ -261,17 +285,19 @@ Ordre logique :
 2. Reseau
 3. Git
 4. Bash
-5. Docker
-6. Docker Compose
-7. CI/CD
-8. Deploiement serveur
-9. Cloud
-10. Terraform
+5. YAML
+6. Bases de donnees simples
+7. Docker
+8. Docker Compose
+9. CI/CD
+10. Deploiement serveur
 11. Monitoring
-12. Kubernetes
-13. Securite continue
+12. Securite de base
+13. Cloud
+14. Terraform
+15. Kubernetes
 
 Pourquoi ?
 
-Parce que Kubernetes repose sur Docker, Docker repose sur Linux, CI/CD repose sur Git, et le cloud repose sur les bases reseau.
+Parce que Kubernetes repose sur Docker, Docker repose sur Linux, CI/CD repose sur Git, Docker Compose repose beaucoup sur YAML, et le cloud repose sur les bases reseau.
 
