@@ -1,80 +1,86 @@
-# Programme DevOps debutant -> alternance
+# Programme DevOps Projet-First
 
-Objectif : former une personne pour qu'elle puisse viser une alternance DevOps avec des bases solides, des projets concrets et un GitHub presentable.
+Objectif : accompagner une personne débutante jusqu'à un niveau crédible pour viser un stage ou une alternance DevOps junior en France.
 
-L'idee centrale :
+Le livrable final n'est pas une pile de notes. C'est un GitHub présentable : un projet fil rouge déployé, documenté, observable, automatisé, avec des preuves concrètes à montrer en entretien.
 
-> Un profil DevOps junior doit prouver qu'il sait prendre une application simple et l'amener vers un fonctionnement plus fiable : Docker, CI/CD, serveur, logs, monitoring, securite de base et documentation.
+## Point De Départ
 
-## Structure du repo
+On apprend en construisant.
+
+Chaque chapitre est une mission : tu pars d'un brief, tu construis, tu bloques, tu lis l'encadré de cours utile, puis tu continues. La théorie sert le projet, pas l'inverse.
+
+## Ce Que Tu Construis
+
+Le fil rouge est un backend de chatbot en Python, FastAPI et PostgreSQL.
+
+Il grandit mission après mission :
+
+```txt
+FastAPI + PostgreSQL
+-> Docker Compose
+-> CI/CD
+-> image publiée
+-> VPS + Nginx + HTTPS
+-> logs + monitoring + incident
+-> LLM externe + Cloud Run
+-> Terraform + CD
+-> Kubernetes optionnel
+-> vitrine GitHub recruteur-ready
+```
+
+À côté du fil rouge, quelques missions produisent de petits repos satellites utiles : journal DevOps, serveur public minimal, scripts d'automatisation.
+
+## Comment Utiliser Ce Repo
+
+1. Ouvre [PARCOURS.md](./PARCOURS.md) pour voir les missions et les paliers.
+2. Travaille une mission à la fois depuis `missions/*/MISSION.md`.
+3. Committe à chaque étape importante avec un message clair.
+4. Dépose les preuves dans `flagship/evidence/` quand la mission le demande.
+5. Utilise `ressources/` comme aide-mémoire : commandes, debug, glossaire, prompts IA, portfolio.
+6. Après la Mission 6, commence à postuler en parallèle de la suite.
+
+## Paliers
+
+| Palier | Missions | Résultat |
+| --- | --- | --- |
+| Employable Core | 0 à 6 | App dockerisée, testée, en ligne, monitorée, avec sauvegarde et runbook |
+| Cloud / IaC Plus | 7 à 8 | Cloud Run, LLM externe, Terraform, CD, budget cloud maîtrisé |
+| Wow Optionnel | 9 | Kubernetes local, HPA, Kustomize, test de charge optionnel |
+| Vitrine | 10 | README, preuves, schéma, CV, pitch, profil GitHub |
+
+## Structure
 
 ```txt
 .
-|-- README.md
-|-- ROADMAP_DEVOPS.md
-|-- fiches/
-|   |-- 00_Mode_emploi.md
-|   |-- 01_Linux_Terminal_SSH.md
-|   |-- 02_Reseau_HTTP_DNS_Nginx.md
-|   |-- 03_Git_GitHub.md
-|   |-- 04_Bash_Python_Automatisation.md
-|   |-- 05_Docker_Docker_Compose.md
-|   |-- 06_CICD_GitHub_Actions.md
-|   |-- 07_Deploiement_Cloud_Nginx_HTTPS.md
-|   |-- 08_Terraform_IaC.md
-|   |-- 09_Kubernetes.md
-|   |-- 10_Monitoring_Logs_Securite.md
-|   |-- 11_Databases_YAML.md
-|   `-- 12_Role_Mentalite_Entretien.md
-`-- projets/
-    `-- PROJETS_PORTFOLIO.md
+├── README.md
+├── PARCOURS.md
+├── PLAN_REFONTE.md
+├── agent.md
+├── missions/
+├── flagship/
+│   ├── app/
+│   ├── migrations/
+│   ├── ansible/
+│   ├── k8s/
+│   └── evidence/
+└── ressources/
 ```
 
-## Methode
+## Règle D'or
 
-Pour chaque fiche :
+Ne dis pas seulement : "je connais Docker, Terraform, Grafana".
 
-1. Lire la section "En bref".
-2. Reformuler l'analogie avec ses propres mots.
-3. Faire les exercices faciles.
-4. Faire au moins un exercice moyen.
-5. Faire le drill de 5 questions.
-6. Noter ce qui bloque.
-7. Committer proprement le travail.
+Dis plutôt :
 
-Validation d'une fiche :
+> J'ai pris une API FastAPI avec PostgreSQL, je l'ai conteneurisée, testée en CI, publiée en image Docker, déployée en HTTPS sur un VPS, surveillée avec Prometheus/Grafana, puis j'ai documenté un incident et les preuves d'exploitation.
 
-| Niveau    | Condition                                     |
-| --------- | --------------------------------------------- |
-| Lu        | Tu comprends l'idee generale                  |
-| Manipule  | Tu as lance des commandes ou ecrit un fichier |
-| Explique  | Tu peux l'expliquer simplement a quelqu'un    |
-| Portfolio | Tu l'as utilise dans un projet GitHub         |
+Un profil junior crédible ne prétend pas tout savoir. Il montre qu'il sait construire, vérifier, documenter, débugger et expliquer.
 
-## Regle d'or
+## IA Dans Le Parcours
 
-Ne pas apprendre DevOps comme une liste d'outils.
+L'IA est utilisée comme accélérateur : aide au debug, relecture de config, génération de première version, amélioration de README, préparation d'entretien.
 
-Apprendre DevOps comme un chemin :
+Elle n'est jamais la source de vérité. Chaque suggestion doit être confirmée par des tests, la CI, des logs, des métriques, des scans ou une commande de diagnostic.
 
-```txt
-Application locale
--> Git
--> Docker
--> CI/CD
--> Serveur Linux
--> Nginx + HTTPS
--> Logs + monitoring
--> Securite de base
--> Terraform / Kubernetes en introduction
-```
-
-## Resultat attendu
-
-A la fin, l'apprenant doit pouvoir dire en entretien :
-
-> J'ai dockerise une application, ajoute une base PostgreSQL, cree une pipeline GitHub Actions, deployee sur un serveur Linux avec Nginx, configure HTTPS, ajoute des logs, un monitoring simple et documente le tout.
-
-Ce n'est pas un profil expert.
-
-C'est un profil junior credible.
+La trace utile de cette pratique est conservée dans [ressources/AI_USAGE_LOG.md](./ressources/AI_USAGE_LOG.md) et, quand c'est pertinent, dans `flagship/evidence/`.

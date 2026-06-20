@@ -1,102 +1,75 @@
 # Agent Guide
 
-## Objectif du repo
+## Objectif Du Repo
 
-Ce repo contient un programme d'apprentissage DevOps progressif, concu pour partir des bases et construire des competences pratiques jusqu'a un niveau credible pour une alternance junior.
+Ce repo contient un parcours DevOps projet-first pour débutant visant un stage ou une alternance junior.
 
-Le but est de transformer des notions DevOps en parcours concret :
+La sortie attendue est un GitHub crédible : un fil rouge FastAPI/PostgreSQL qui passe progressivement par Docker, CI/CD, VPS, HTTPS, monitoring, cloud, Terraform, IA externe et portfolio.
 
-```txt
-comprendre les concepts
--> pratiquer avec des exercices
--> construire des mini-projets
--> realiser des projets portfolio
--> savoir expliquer son travail en entretien
-```
+## Principe Pédagogique
 
-## Public cible
+Chaque contenu doit partir d'une mission concrète.
 
-Le contenu vise un profil debutant.
-
-Chaque notion doit donc etre expliquee simplement, avec :
-
-- une idee centrale claire;
-- une analogie concrete;
-- des mots importants definis;
-- des exemples pratiques;
-- des exercices progressifs;
-- un drill de validation.
-
-## Style attendu
-
-Les fiches doivent rester pedagogiques, directes et vulgarisees.
-
-Eviter :
-
-- le jargon non explique;
-- les longs blocs de theorie sans pratique;
-- les listes d'outils sans contexte;
-- les explications trop expertes trop tot.
-
-Preferer :
-
-- des phrases courtes;
-- des tableaux lisibles;
-- des commandes utiles;
-- des exemples proches du terrain;
-- des validations mesurables.
-
-## Progression pedagogique
-
-Respecter l'ordre logique :
-
-1. Linux
-2. Reseau
-3. Git
-4. Bash / Python
-5. Docker
-6. Docker Compose
-7. CI/CD
-8. Deploiement serveur
-9. Cloud
-10. Terraform
-11. Monitoring / logs / securite
-12. Kubernetes
-
-Ne pas introduire Kubernetes, Terraform ou Grafana avant que les bases Linux, reseau, Git et Docker soient posees.
-
-## Regle pratique
-
-Chaque fiche doit aider a produire quelque chose :
-
-- une commande testee;
-- un script;
-- un fichier de configuration;
-- un Dockerfile;
-- une pipeline;
-- une procedure de debug;
-- une documentation;
-- un projet GitHub presentable.
-
-Une fiche purement theorique doit rester l'exception.
-
-## Objectif final
-
-A la fin du parcours, le repo doit permettre de construire et raconter ce type de projet :
+Ordre attendu :
 
 ```txt
-API simple
--> Dockerfile
--> Docker Compose avec PostgreSQL
--> pipeline GitHub Actions
--> deploiement sur serveur Linux
--> Nginx + HTTPS
--> logs et monitoring simple
--> securite de base
--> documentation claire
+brief -> action -> blocage -> cours ciblé -> preuve -> commit -> phrase d'entretien
 ```
 
-Le resultat attendu n'est pas l'expertise senior.
+La théorie doit être courte, contextualisée et placée au moment où l'apprenant en a besoin.
 
-Le resultat attendu est une base junior solide, pratique, documentee et montrable.
+## Format D'une Mission
 
+Chaque `MISSION.md` doit suivre ce squelette :
+
+1. `🎯 Le brief`
+2. `🧠 Ce que tu vas vraiment apprendre`
+3. `✅ Definition of Done`
+4. `🧩 Les checkpoints`
+5. `📦 Plan de commits`
+6. `🚀 Pour aller plus loin`
+7. `🤖 IA dans cette mission`
+8. `🧾 Ce que tu sais maintenant`
+9. `🗣️ Ta phrase d'entretien`
+
+Les checkpoints doivent produire des actions vérifiables, pas seulement des lectures.
+
+## Style Attendu
+
+Écrire pour un débutant intelligent, pas pour un expert.
+
+Préférer :
+
+- phrases courtes ;
+- analogies simples ;
+- commandes copiables ;
+- erreurs classiques ;
+- preuves concrètes ;
+- langage d'entretien ;
+- tableaux seulement quand ils clarifient.
+
+Éviter :
+
+- jargon non expliqué ;
+- longues introductions théoriques ;
+- empilement d'outils ;
+- promesses trop ambitieuses ;
+- contenu qui ne produit ni fichier, ni commande, ni preuve.
+
+## IA Assistée
+
+Chaque mission inclut un bloc `🤖 IA dans cette mission`.
+
+Le message à faire passer :
+
+> L'IA accélère le travail, mais la source de vérité reste la CI, les tests, les logs, les métriques, les scans et les commandes de diagnostic.
+
+Limiter `AI_USAGE_LOG.md` à 2 ou 3 usages marquants par mission. L'objectif est de montrer une pratique saine, pas de tenir un journal exhaustif.
+
+## Niveau Cible
+
+Le parcours ne cherche pas à fabriquer un profil senior.
+
+Il doit permettre à l'apprenant de dire honnêtement :
+
+> J'ai construit, déployé, surveillé et documenté une application réelle. Je sais expliquer mes choix, retrouver une erreur, automatiser les étapes répétables et montrer des preuves de fonctionnement.
