@@ -6,6 +6,8 @@ Ne pas chercher a tout faire parfaitement au debut.
 
 Objectif : manipuler, noter les commandes, comprendre les erreurs, puis committer.
 
+Pour une version plus guidee, suivre d'abord [TP_LINUX_COMPLET.md](TP_LINUX_COMPLET.md).
+
 ## Exercices a faire
 
 - [ ] Navigation : creer `devops/linux/lab`, entrer dedans, creer `notes.txt`.

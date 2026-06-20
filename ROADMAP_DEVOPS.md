@@ -126,14 +126,33 @@ Mini-evaluation semaine 8 :
 
 Comprendre comment emballer une application et ses dependances.
 
+La formation Dyma Docker sert de support principal pour ce mois. Le but n'est pas seulement de regarder les videos : chaque chapitre doit produire une preuve dans `exercices/05_docker/` ou dans le repo `dockerized-api`.
+
 ### Semaines
 
 | Semaine | Sujet | A savoir faire |
 |---|---|---|
-| 9 | Docker base | image, conteneur, port, logs |
-| 10 | Dockerfile | construire une image simple |
-| 11 | Docker Compose | API + PostgreSQL + Adminer, en reutilisant les bases YAML/DB |
-| 12 | Volumes, networks, `.env` | persister les donnees et configurer proprement |
+| 9 | Dyma 1-2 : introduction et bases Docker | image, conteneur, port, logs, `docker run`, `docker ps`, `docker logs` |
+| 10 | Dyma 3-5 : Dockerfile, images, serveur Node | construire une image, utiliser `.dockerignore`, taguer une image, lancer une API |
+| 11 | Dyma 6-8 : volumes, reseaux, Docker Compose | persister PostgreSQL, connecter API + DB, lancer une stack Compose |
+| 12 | Dyma 9-11 : client, multi-services, production | Compose client + API + DB, `.env.example`, commandes de prod locale |
+
+### Decoupage Dyma integre
+
+| Chapitre Dyma | Priorite | Travail a produire |
+|---|---|---|
+| 1. Introduction a Docker | Prioritaire | Notes courtes : probleme resolu par Docker, image vs conteneur |
+| 2. Decouvrir les bases de Docker | Prioritaire | Lancer `hello-world` et `nginx`, exposer un port, lire les logs, nettoyer les conteneurs |
+| 3. Creer une image avec un Dockerfile | Prioritaire | Creer une image simple avec `Dockerfile` et `.dockerignore` |
+| 4. Trouver et partager des images Docker | Important | Pull/tag d'image, explication registry/tag; push Docker Hub seulement si compte disponible |
+| 5. Creer une image Docker pour un serveur Node | Prioritaire | Dockeriser une petite API Node avec une route `/health` |
+| 6. Persister des donnees avec Docker | Prioritaire | Lancer PostgreSQL avec volume, verifier que les donnees survivent a une recreation |
+| 7. Les reseaux Docker | Prioritaire | Connecter API et DB via un network Docker, expliquer les noms de services |
+| 8. Utiliser Docker Compose | Prioritaire | Ecrire `docker-compose.yml` pour API + PostgreSQL + Adminer |
+| 9. Dockerfile et Docker Compose pour une application client | Secondaire | Ajouter un client minimal seulement si le projet a un front; sinon documenter le principe |
+| 10. Utiliser Docker Compose avec plusieurs services | Prioritaire | Finaliser une stack locale client/API/DB ou API/DB/Adminer |
+| 11. Mise en production avec Docker et Docker compose | Prioritaire | Ajouter `.env.example`, `restart`, notes de deploiement et commandes de debug |
+| 12. Docker avec PHP et Symfony | Optionnel | A faire seulement si un projet PHP/Symfony est choisi; sinon survol |
 
 ### Projet portfolio 2
 
@@ -143,17 +162,21 @@ Contenu :
 
 - une petite API Node, Python ou Go;
 - un `Dockerfile`;
+- un `.dockerignore`;
 - un `docker-compose.yml`;
 - une base PostgreSQL;
 - un `.env.example`;
-- un README avec commandes de lancement.
+- un README avec commandes de lancement;
+- une section debug : logs, shell dans le conteneur, reset des volumes.
 
 ### Validation
 
 L'apprenant doit pouvoir expliquer :
 
 - difference entre image et conteneur;
+- difference entre `docker run` et `docker compose up`;
 - pourquoi utiliser un volume pour PostgreSQL;
+- pourquoi une API peut joindre PostgreSQL avec le nom du service Compose;
 - pourquoi ne pas mettre de secrets dans Git;
 - comment lire les logs d'un conteneur.
 
