@@ -21,11 +21,14 @@ Codes de sortie :
 Verifie l'utilisation disque d'un chemin.
 
 ```bash
-python3 scripts/check_disk.py /mnt/c --critical 80
-python3 scripts/check_disk.py /mnt/c --critical 0
+python3 scripts/check_disk.py /mnt/c --warning 70 --critical 90
+python3 scripts/check_disk.py /mnt/c --warning 0 --critical 90
+python3 scripts/check_disk.py /mnt/c --warning 0 --critical 0
 ```
 
 Codes de sortie :
 
-- `0` : disque sous le seuil critique.
-- `2` : disque au-dessus ou egal au seuil critique.
+- `0` : disque sous le seuil warning.
+- `1` : disque au-dessus ou egal au seuil warning.
+- `2` : disque au-dessus ou egal au seuil critical.
+- `3` : configuration de seuils invalide.
