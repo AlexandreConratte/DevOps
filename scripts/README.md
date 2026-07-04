@@ -15,3 +15,17 @@ Codes de sortie :
 
 - `0` : endpoint OK.
 - `2` : endpoint indisponible ou code HTTP inattendu.
+
+## check_disk.py
+
+Verifie l'utilisation disque d'un chemin.
+
+```bash
+python3 scripts/check_disk.py /mnt/c --critical 80
+python3 scripts/check_disk.py /mnt/c --critical 0
+```
+
+Codes de sortie :
+
+- `0` : disque sous le seuil critique.
+- `2` : disque au-dessus ou egal au seuil critique.
