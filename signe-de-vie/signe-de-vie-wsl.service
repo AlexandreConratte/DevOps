@@ -1,0 +1,14 @@
+[Unit]
+Description=Mission 1 - Signe de vie HTTP server in WSL
+After=network.target
+
+[Service]
+Type=simple
+User=alexconratte
+WorkingDirectory=/mnt/c/Users/conra/devOps/signe-de-vie
+ExecStart=/usr/bin/python3 /mnt/c/Users/conra/devOps/signe-de-vie/server.py
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
