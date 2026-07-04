@@ -1,0 +1,2 @@
+# Mission 2 - backup every 5 minutes for local WSL testing
+*/5 * * * * cd /mnt/c/Users/conra/devOps && ./scripts/backup_dir.sh signe-de-vie backups-test >> logs/cron-backup.log 2>&1

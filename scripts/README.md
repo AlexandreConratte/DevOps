@@ -47,3 +47,13 @@ Codes de sortie :
 
 - `0` : backup cree.
 - `2` : erreur d'usage, source absente, ou creation d'archive impossible.
+
+### Cron
+
+Exemple de crontab pour lancer le backup toutes les 5 minutes en local WSL :
+
+```cron
+*/5 * * * * cd /mnt/c/Users/conra/devOps && ./scripts/backup_dir.sh signe-de-vie backups-test >> logs/cron-backup.log 2>&1
+```
+
+La meme ligne est conservee dans `scripts/crontab.example`.
