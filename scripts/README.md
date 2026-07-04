@@ -32,3 +32,18 @@ Codes de sortie :
 - `1` : disque au-dessus ou egal au seuil warning.
 - `2` : disque au-dessus ou egal au seuil critical.
 - `3` : configuration de seuils invalide.
+
+## backup_dir.sh
+
+Cree une archive `.tar.gz` d'un dossier source vers un dossier destination, puis ecrit un log dans `logs/backup.log`.
+
+```bash
+bash scripts/backup_dir.sh signe-de-vie backups
+bash scripts/backup_dir.sh dossier-inexistant backups
+tail -n 5 logs/backup.log
+```
+
+Codes de sortie :
+
+- `0` : backup cree.
+- `2` : erreur d'usage, source absente, ou creation d'archive impossible.
