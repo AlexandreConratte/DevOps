@@ -5,19 +5,19 @@ import sys
 
 
 # argparse lit les arguments passes dans la commande.
-parser = argparse.ArgumentParser(description="Check disk usage for a path.")
-parser.add_argument("path", help="Path to check, for example /")  # argument obligatoire
+parser = argparse.ArgumentParser(description="Check disk usage du chemin")
+parser.add_argument("path", help="chemin a check")  # argument obligatoire
 parser.add_argument(
     "--critical",
     type=float,
     default=80,
-    help="Critical threshold in percent. Default: 80",
+    help="Critical in percent. Default: 80",
 )
 parser.add_argument(
     "--warning",
     type=float,
     default=70,
-    help="Warning threshold in percent. Default: 70",
+    help="Warning in percent. Default: 70",
 )
 
 # parse_args stocke les valeurs dans args.path, args.warning et args.critical.

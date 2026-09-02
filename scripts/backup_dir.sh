@@ -12,7 +12,7 @@
   LOG_DIR="logs"
   LOG_FILE="$LOG_DIR/backup.log"
 
-  mkdir -p "$LOG_DIR"    #creer le dossier de log si non exist
+  mkdir -p "$LOG_DIR"    
 
 #verifier que la source est bien un dossier sinon exit 2
    if [ ! -d "$SOURCE_DIR" ]; then
@@ -22,10 +22,10 @@
     exit 2
   fi
 
-   mkdir -p "$DEST_DIR"  #creer le dossier de destination si non existant
+   mkdir -p "$DEST_DIR"  
 
    TIMESTAMP="$(date +%Y%m%d-%H%M%S)"    
-  ARCHIVE_PATH="$DEST_DIR/backup-$TIMESTAMP.tar.gz"  #cree le nom du fichier avec la timestamp pour le rendre unique
+  ARCHIVE_PATH="$DEST_DIR/backup-$TIMESTAMP.tar.gz" 
 
   #tar -czf "$ARCHIVE_PATH" "$SOURCE_DIR"   create, z = gzip, f = ecrire dans le fichier 
 

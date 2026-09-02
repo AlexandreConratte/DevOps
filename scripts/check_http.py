@@ -29,7 +29,7 @@ def parse_args():
 
 def main():
     args = parse_args()  # Lit les arguments de la commande.
-    started_at = time.monotonic()  # Demarre le chrono.
+    started_at = time.monotonic()
     request = Request(args.url, headers={"User-Agent": "devops-check-http/1.0"})
 
     try:
@@ -47,7 +47,7 @@ def main():
                 file=sys.stderr,
             )
             return 2
-    # Le serveur repond, mais avec un code HTTP d'erreur.
+    # si le serveur repond, mais avec un code HTTP d'erreur.
     except HTTPError as error:
         elapsed_ms = int((time.monotonic() - started_at) * 1000)
         print(
@@ -56,7 +56,7 @@ def main():
             file=sys.stderr,
         )
         return 2
-    # Probleme reseau : DNS, connexion refusee, serveur eteint.
+    # si pbm reseau : DNS, connexion refusee, serveur eteint.
     except URLError as error:
         elapsed_ms = int((time.monotonic() - started_at) * 1000)
         print(
