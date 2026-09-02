@@ -3,7 +3,7 @@ $listener = [System.Net.Sockets.TcpListener]::new([System.Net.IPAddress]::Loopba
 $listener.Start()
 
 Write-Host "Signe de vie server listening on http://localhost:8000/"
-Write-Host "Press Ctrl+C to stop."
+
 
 try {
     while ($true) {
